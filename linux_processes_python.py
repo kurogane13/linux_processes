@@ -20,7 +20,7 @@ def show_processes():
                 name = 'Unknown'
             cmd = ' '.join(process_data[10:])
             options.append(pid + ' ' + name + ' ' + cmd)
-    choice = eg.choicebox("Showing all running processes:\n\n\nTotal amount of running processes: "+str(process_amount)+"\n\n\nTo filter and view a specific process, double click on it, or select it and click Ok", choices=options)
+    choice = eg.choicebox("Showing all running processes:\n\n\nTotal amount of running processes: "+str(process_amount)+"\n\n\nTo filter and view a specific process, double click on it, or select it and click Ok", title="Running processes window", choices=options)
     if choice is None:
         return
     for i in options:
